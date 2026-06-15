@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:3000';
+const BASE = process.env.REACT_APP_BASE_URL || 'https://prodesk-week10.onrender.com';
 
 const handle = async (res) => {
     if (!res.ok) {
