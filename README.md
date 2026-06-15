@@ -1,16 +1,46 @@
-# React + Vite
+# ProDesk Blog - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React + Vite frontend for a simple blog platform. Users can create, view, edit, and delete posts, with image support and a dark mode toggle.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- View all posts in a responsive card grid
+- Top 3 most recent posts highlighted at the top
+- Create posts with a title, content, and optional image upload
+- Edit posts via a modal
+- Delete posts with a confirmation step
+- Dark / light mode toggle
+- Toast notifications for all actions
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 18** with Vite
+- **Tailwind CSS** for styling
+- **REST API** via Fetch (`src/api.js`)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+The app runs on `http://localhost:5173` by default.
+
+## Environment Variables
+
+Create a `.env` file in this directory to point at a custom backend:
+
+```env
+REACT_APP_BASE_URL=https://your-backend.onrender.com
+```
+
+If omitted, it defaults to `https://prodesk-week10.onrender.com`.
+
+## Backend
+
+The backend repo lives in `../week10/`. It is an Express + MongoDB API that must be running (locally on port 5000, or deployed) for the frontend to work.
+
+## Live Demo
+
+Frontend: [https://prodesk-week11-five.vercel.app](https://prodesk-week11-five.vercel.app)
